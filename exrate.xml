@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <dleplugin>
-	<name>exrate</name>
-	<description>Курсы валют от Центробанка РФ</description>
-	<icon></icon>
+	<name>cbr-exrate by TCSE</name>
+	<description>Курсы валют от Центробанка РФ.</description>
+	<icon>engine/skins/images/cbr-exrate.png</icon>
 	<version>2.1</version>
 	<dleversion>13</dleversion>
 	<versioncompare>greater</versioncompare>
 	<upgradeurl></upgradeurl>
 	<filedelete>0</filedelete>
 	<needplugin></needplugin>
-	<mnotice>0</mnotice>
+	<mnotice>1</mnotice>
 	<mysqlinstall><![CDATA[]]></mysqlinstall>
 	<mysqlupgrade><![CDATA[]]></mysqlupgrade>
 	<mysqlenable><![CDATA[]]></mysqlenable>
@@ -20,7 +20,11 @@
 	<phpenable><![CDATA[]]></phpenable>
 	<phpdisable><![CDATA[]]></phpdisable>
 	<phpdelete><![CDATA[]]></phpdelete>
-	<notice><![CDATA[]]></notice>
+	<notice><![CDATA[Репозиторий плагина [url]https://github.com/tcse/cbr-exrate[/url]
+Список доступных валют можно получить по ссылке [url]http://www.cbr.ru/scripts/XML_daily.asp[/url] 
+Добавление или исправление списка валют для вывода в шаблон необходимо производить вручную в файле [b]engine/modules/mod_tcse/cbr-exrate/exrate.php[/b]
+
+Для отображения курса валют в шаблоне сайта в нужном месте добавить тег [code]{exrate}[/code]]]></notice>
 	<file name="engine/modules/main.php">
 		<operation action="after">
 			<searchcode><![CDATA[$tpl->set ( '{speedbar}', $tpl->result['speedbar'] );]]></searchcode>
