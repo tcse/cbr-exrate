@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<dleplugin>
+	<name>exrate</name>
+	<description>Курсы валют от Центробанка РФ</description>
+	<icon></icon>
+	<version>2.1</version>
+	<dleversion>13</dleversion>
+	<versioncompare>greater</versioncompare>
+	<upgradeurl></upgradeurl>
+	<filedelete>0</filedelete>
+	<needplugin></needplugin>
+	<mnotice>0</mnotice>
+	<mysqlinstall><![CDATA[]]></mysqlinstall>
+	<mysqlupgrade><![CDATA[]]></mysqlupgrade>
+	<mysqlenable><![CDATA[]]></mysqlenable>
+	<mysqldisable><![CDATA[]]></mysqldisable>
+	<mysqldelete><![CDATA[]]></mysqldelete>
+	<phpinstall><![CDATA[]]></phpinstall>
+	<phpupgrade><![CDATA[]]></phpupgrade>
+	<phpenable><![CDATA[]]></phpenable>
+	<phpdisable><![CDATA[]]></phpdisable>
+	<phpdelete><![CDATA[]]></phpdelete>
+	<notice><![CDATA[]]></notice>
+	<file name="engine/modules/main.php">
+		<operation action="after">
+			<searchcode><![CDATA[$tpl->set ( '{speedbar}', $tpl->result['speedbar'] );]]></searchcode>
+			<replacecode><![CDATA[$tpl->set ( '{exrate}', $tpl->result['exrate'] );]]></replacecode>
+		</operation>
+	</file>
+	<file name="engine/init.php">
+		<operation action="before">
+			<searchcode><![CDATA[include_once (DLEPlugins::Check(ENGINE_DIR . '/modules/main.php'));
+
+?>]]></searchcode>
+			<replacecode><![CDATA[include_once (DLEPlugins::Check(ENGINE_DIR . '/modules/mod_tcse/cbr-exrate/exrate.php'));]]></replacecode>
+		</operation>
+	</file>
+</dleplugin>
