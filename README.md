@@ -1,6 +1,7 @@
 # cbr-exrate
 Курсы валют Центробанка России для DataLife Engine
 
+![](https://sun9-54.userapi.com/impf/eiQJ1YXbgH_64clTq-23OPd0A6G0VaN8ILB3Tg/ifAHXASH2-c.jpg?size=827x437&quality=96&proxy=1&sign=bfbd54e730ec0e88f4ee9bff9f6922da&type=album)
 
 ## Установка 
 Через систему плагинов DLE 13 и выше.
